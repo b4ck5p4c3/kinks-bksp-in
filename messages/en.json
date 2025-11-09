@@ -1,0 +1,77 @@
+{
+  "home": {
+    "title": "Kink-profile generator",
+    "description": "Create and share your personal kinks profile based on",
+    "research": "Aella's kinks research",
+    "howItWorks": "How it works:",
+    "steps": {
+      "step1": "Enter your nickname and optionally set a password for encryption and privacy",
+      "step2": "Rate 246 different kinks from 0 to 100",
+      "step3": "Get a short link to share your profile with others",
+      "step4": "PROFIT"
+    },
+    "createButton": "🪄 Create profile 🪄"
+  },
+  "create": {
+    "title": "Create your kink-profile"
+  },
+  "wizard": {
+    "step": "Step {current} of {total}",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "info": {
+      "nickname": "Nickname",
+      "nicknamePlaceholder": "Enter your nickname",
+      "password": "Password (optional)",
+      "passwordPlaceholder": "Leave empty for no encryption",
+      "passwordHelp": "If you set a password, your data will be encrypted client-side before being sent to the server. You'll need this password to view your profile."
+    },
+    "kinks": {
+      "title": "Kinks {start}—{end} of {total}",
+      "scaleLabels": {
+        "love": "Absolutely love",
+        "indifferent": "Indifferent",
+        "taboo": "Taboo"
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "nickname": "Nickname:",
+      "encrypted": "Encrypted:",
+      "yes": "Yes",
+      "no": "No",
+      "kinksRated": "Kinks rated:",
+      "creating": "Creating profile..."
+    }
+  },
+  "profile": {
+    "title": "{nickname}'s Kinks Profile",
+    "shareButton": "Share Link",
+    "copied": "Copied!",
+    "scaleTitle": "Kink Attractiveness Scale",
+    "scaleLabels": {
+      "love": "Absolutely love",
+      "indifferent": "Indifferent",
+      "taboo": "Taboo"
+    },
+    "chartTitle": "Kinks based on",
+    "research": "Aella's kinks research",
+    "loading": "Loading profile...",
+    "notFound": "Profile not found",
+    "error": "Failed to load profile"
+  },
+  "password": {
+    "title": "Password required",
+    "description": "This profile is encrypted. Please enter the password to view it.",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter password",
+    "submitButton": "Unlock",
+    "error": "Incorrect password or corrupted data"
+  },
+  "chart": {
+    "loading": "Loading chart...",
+    "xAxisTitle": "Kink tabooness",
+    "yAxisTitle": "% of people interested in the kink"
+  }
+}
