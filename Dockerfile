@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM node:20 AS base
 
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
@@ -9,6 +9,7 @@ WORKDIR /app
 
 # Copy package files
 COPY package.json pnpm-lock.yaml* ./
+COPY prisma/ prisma/
 RUN pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
@@ -16,6 +17,8 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+RUN ls -la .
 
 # Generate Prisma Client
 RUN pnpm prisma generate
@@ -36,7 +39,6 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 
 USER nextjs
 
